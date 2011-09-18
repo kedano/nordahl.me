@@ -1,0 +1,16 @@
+%html
+	%head
+		%meta{:charset => 'utf-8'}
+		
+		%title Kenneth D. Nordahl
+		%meta{ :author => 'description', :content => 'The online presence of Kenneth D. Nordahl'}
+		%meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+		%link{:rel => "stylesheet", :type => "text/css", :href => "/assets/application.css"}
+		%script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'}
+		%script{:src => '/assets/application.js'}
+	%body{:class => 'scalable'}
+		%header{:class => 'grid_12-12'}
+			%h1 Kenneth Dahlstrøm Nordahl
+		=yield
+		%footer{:class => 'grid_12-12'}
+			%small Copyright 2011 | <a href="http://nordahl.me">nordahl.me</a>
