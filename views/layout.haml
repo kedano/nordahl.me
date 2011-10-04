@@ -9,8 +9,8 @@
 		%script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'}
 		%script{:src => '/assets/application.js'}
 	%body{:class => 'scalable'}
-		%header{:class => 'grid_12-12'}
+		%header{:id => 'header'}
 			%h1 Kenneth Dahlstrøm Nordahl
 		=yield
-		%footer{:class => 'grid_12-12'}
+		%footer{:id => 'footer'}
 			%small Copyright 2011 | <a href="http://nordahl.me">nordahl.me</a>

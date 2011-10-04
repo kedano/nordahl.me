@@ -5,6 +5,8 @@ gem 'sinatra'
 gem 'haml'
 # HTML5Boilerplate helper
 gem 'sass'
+gem 'compass-scalablegs-plugin'
+gem 'bourbon'
 # Asset pipeline
 gem 'sprockets'
 # jQuery javascript framework

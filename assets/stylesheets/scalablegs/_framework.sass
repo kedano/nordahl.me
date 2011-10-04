@@ -1,0 +1,83 @@
+$scalable-gutter-width: 2% !default
+
+$scalable-grid-min-width: 26em !default
+
+$scalable-grid-max-width: 82em !default
+
+$scalable-grid-width: 100% !default
+
+$scalable-columns: 20 !default
+
+
+=grid-scalable
+  margin-left: auto
+  margin-right: auto
+  min-width: $scalable-grid-min-width
+  max-width: $scalable-grid-max-width
+  position: relative
+
+=grid-width($n, $cols: $scalable-columns, $gutter-width: $scalable-gutter-width)
+  width: $scalable-grid-width / $cols * $n - $gutter-width
+
+=grid-unit-base($gutter-width: $scalable-gutter-width)
+  display: inline
+  float: left
+  margin:
+    left: $gutter-width / 2
+    right: $gutter-width / 2
+
+=grid($n, $cols: $scalable-columns, $gutter-width: $scalable-gutter-width)
+  +grid-unit-base($gutter-width)
+  +grid-width($n, $cols, $gutter-width)
+
+=grid-first
+  margin-left: 0
+
+=grid-last
+  margin-right: 0
+
+=grids($cols: $scalable-columns, $gutter-width: $scalable-gutter-width)
+  #{enumerate(".grid", 1, $cols, "_")}
+    +grid-unit-base
+  @for $n from 1 through $cols
+    .grid_#{$n}
+      +grid-width($n, $cols, $gutter-width)
+
+=grid-children
+  .first
+    +grid-first
+  .last
+    +grid-last
+
+=grid-move-base
+  position: relative
+
+=grid-move-push($n, $cols)
+  left: ($scalable-grid-width / $cols) * $n
+
+=grid-move-pull($n, $cols)
+  left: -($scalable-grid-width / $cols) * $n
+
+=grid-push($n, $cols: $scalable-columns)
+  +grid-move-base
+  +grid-move-push($n, $cols)
+
+=grid-pull($n, $cols: $scalable-columns)
+  +grid-move-base
+  +grid-move-pull($n, $cols)
+
+=grid-movements($cols: $scalable-columns)
+  #{enumerate(".push", 1, $cols, "_")},
+  #{enumerate(".pull", 1, $cols, "_")}
+    +grid-move-base
+  @for $n from 1 through $cols
+    .push_#{$n}
+      +grid-move-push($n, $cols)
+    .pull_#{$n}
+      +grid-move-pull($n, $cols)
+
+=grid-system($cols: $scalable-columns)
+  +grid-scalable
+  +grids($cols)
+  +grid-children
+  +grid-movements($cols)

@@ -1,22 +1,20 @@
 %section{:class => "clearfix"}
-	#dfmf{:class => 'grid_6-12'}
+	#github
+		%h1 Github
+	#dfmf
 		%h1 Design for mobile first
-	
-	#forrst{:class => 'grid_6-12'}
+%section{:class => "clearfix"}
+	#dribbble
+		%h1 Dribbble
+		%img{:src => @dribbble.image_url}
+	#forrst
 		%h1 Forrst
 		%ul
-			- @forrst.public_posts.first(5).each do |forrst|
-	
+			- @forrst.public_posts.first(5).each do |forrst|	
 				%li 
 					%a{:href => forrst.post_url, :class => 'forrst'}= forrst.title
-				
 
-%section{:id => 'dribble', :class => 'grid_8-12'}
-	%h1 Dribbble
-	%img{:src => @dribbble.image_url}
-
-
-%section{:id => 'about', :class => 'grid_12-12'}
+%section{:id => 'about'}
 	%h1 About
 	%p 
 		I am a leader when it comes to taking advantage of new technics and technologies in my work. I am an expert in the front end field juggling the latest advances in HTML, CSS and Javascript to create an immersive experiences for the visitor.
@@ -24,7 +22,7 @@
 		lorem	
 	
 		
-%article{:id => 'work', :class => 'grid_12-12'}		
+%article{:id => 'work'}		
 	%header
 		%h1 Previouse Work:
 	%section{:class => 'client'}
