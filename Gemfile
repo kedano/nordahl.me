@@ -11,6 +11,8 @@ gem 'bourbon'
 gem 'sprockets'
 # jQuery javascript framework
 gem 'coffee-script'
+# Guthub gem
+gem 'octopi'
 # Dribbble gem
 gem 'httparty'
 gem 'swish'

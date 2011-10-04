@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    api_cache (0.2.3)
     bourbon (0.2.1)
       sass (>= 3.1)
     chunky_png (1.2.5)
@@ -23,8 +24,21 @@ GEM
     httparty (0.7.8)
       crack (= 0.1.8)
     libv8 (3.3.10.2)
+    mechanize (2.0.1)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 1.8)
+      nokogiri (~> 1.4)
+      webrobots (~> 0.0, >= 0.0.9)
     mime-types (1.16)
     multi_json (1.0.3)
+    net-http-digest_auth (1.1.1)
+    net-http-persistent (1.9)
+    nokogiri (1.5.0)
+    octopi (0.4.5)
+      api_cache
+      httparty (>= 0.4.5)
+      mechanize (>= 0.9.3)
+      nokogiri (>= 1.3.1)
     rack (1.2.3)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -43,6 +57,8 @@ GEM
     therubyracer (0.9.4)
       libv8 (~> 3.3.10)
     tilt (1.3.3)
+    webrobots (0.0.12)
+      nokogiri (>= 1.4.4)
     yajl-ruby (0.8.3)
 
 PLATFORMS
@@ -55,6 +71,7 @@ DEPENDENCIES
   execjs
   haml
   httparty
+  octopi
   sass
   sinatra
   sprockets

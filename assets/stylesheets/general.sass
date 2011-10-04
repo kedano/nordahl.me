@@ -1,17 +1,3 @@
-//=gradient($gradient: ($stuff, $start-color, @end-color))
-	-webkit-$gradient: ($stuff, $start-color, @end-color)
-	-moz-$gradient: ($stuff, $start-color, @end-color)
-	-o-$gradient: ($stuff, $start-color, @end-color)
-	-ms-$gradient: ($stuff, $start-color, @end-color)
-	$gradient: ($stuff, $start-color, @end-color)
-
-
-//=gradient( $top, $bottom )
-	background-image = "-webkit-linear-gradient(top, #{$top}, #{$bottom})"
-	background-image = "-moz-linear-gradient(top, #{$top}, #{$bottom})"
-	background-image = "linear-gradient(top, #{$top}, #{$bottom})"
-	
-	
 
 @import css3/linear-gradient
 //	-ms-filter = progid:DXImageTransform.Microsoft.gradient(startColorStr=’#{$top}’, EndColorStr=’#{$bottom}’)
@@ -22,10 +8,16 @@
 
 
 /* General stuff
+html
+	font-size: 62.5%
+	min-height: 100%
+	background: #434950
+
 body
 	font-size: 12px
+	font-size: 1.2rem
 	font-family: Verdana
-	line-height: 1.6em
+	line-height: 1.4rem
 
 	
 h1,h2,h3,h4,h5,h6
@@ -44,11 +36,6 @@ img
 
 a
 	text-decoration: none
-
-html
-	min-height: 100%
-	background-attachment: fixed
-	background: #434950
 
 
 
@@ -73,6 +60,7 @@ body > header > h1
 #github
 	height: 198px
 	max-height: 198px
+	+linear-gradient(yellow, red)
 	h1
 		display: none
 #dfmf
@@ -118,19 +106,11 @@ body > header > h1
 	position: relative
 	background: #fff
 	h1
-		display: block
-		position: absolute
-		right: 0
-		top: -1em
-		background: #fff
-		line-height: 1em
-		text-align: right
-		padding: 0 .3em
+	
 	p
 		padding: 0.5em 1em
 
-.client,article > header
-	margin-top: 1%
+.client, article > header
 	margin-bottom: 1%
 	background: #fff
 	

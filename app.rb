@@ -1,7 +1,9 @@
 require 'bundler'
 Bundler.require
 
-
+configure do
+    mime_type :manifest, 'text/cache-manifest'
+end
 
 project_root = File.expand_path(File.dirname(__FILE__))
 
@@ -35,15 +37,24 @@ end
 
 
 get '/', :provides => 'html' do
+	@github = Github::User.find ''
 	@forrst = Forrst::User.find 'kdn'
 	@dribbble = Dribbble::Shot.find(109375)
 	haml :index
 end
 
-get '/css/stylesheet.css' do
-    scss :stylesheet
-end
+    # '/css/stylesheet.css' do
+    # scss :stylesheet
+    # 
+    # 
+    # '/js/application.js' do
+    # fee :application
+    # 
 
-get '/js/application.js' do
-	coffee :application
+
+get '/nordahlme.manifest' do
+	content_type :manifest
+	puts "CACHE MANIFEST"
+	puts "/assets/application.css"
+	puts "/assets/application.js"
 end
