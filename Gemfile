@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 # Framework
 gem 'sinatra'
+gem 'sinatra-content-for'
 # HTML rendring engine HAML
 gem 'haml'
 # HTML5Boilerplate helper

@@ -6,13 +6,9 @@
 %section{:class => "clearfix"}
 	#dribbble
 		%h1 Dribbble
-		%img{:src => @dribbble.image_url}
 	#forrst
 		%h1 Forrst
-		%ul
-			- @forrst.public_posts.first(5).each do |forrst|	
-				%li 
-					%a{:href => forrst.post_url, :class => 'forrst'}= forrst.title
+    
 
 %section{:id => 'about'}
 	%h1 About
@@ -20,8 +16,7 @@
 		I am a leader when it comes to taking advantage of new technics and technologies in my work. I am an expert in the front end field juggling the latest advances in HTML, CSS and Javascript to create an immersive experiences for the visitor.
 	%p
 		lorem	
-	
-		
+
 %article{:id => 'work'}		
 	%header
 		%h1 Previouse Work:
@@ -54,3 +49,6 @@
 			Another goal with the project was to simplify the buying experience as much as possible. This might sound like a easy task but the backend of the store had to be a robust system where buyers would be able to access their files whenever they wanted to. I ended up linking the site into the awesome Quixly service.
 		%p
 			%a{:href => 'http://kdnmedia.com', :title => 'Link to KDNMEDIA'} Visit the website
+-content_for :js_onload do
+	functionalityController = new window.FunctionalityController();
+	-#alert(1)

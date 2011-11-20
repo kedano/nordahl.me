@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     api_cache (0.2.3)
-    bourbon (0.2.1)
+    bourbon (1.1.0)
       sass (>= 3.1)
     chunky_png (1.2.5)
     coffee-script (2.2.0)
@@ -13,16 +13,17 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-scalablegs-plugin (0.0.2)
-      compass (>= 0.10.0)
-    crack (0.1.8)
-    execjs (1.2.4)
+    compass-scalablegs-plugin (1.0.0)
+      compass (>= 0.10.6)
+    crack (0.3.1)
+    execjs (1.2.9)
       multi_json (~> 1.0)
     fssm (0.2.7)
-    haml (3.1.2)
+    haml (3.1.3)
     hike (1.2.1)
-    httparty (0.7.8)
-      crack (= 0.1.8)
+    httparty (0.8.1)
+      multi_json
+      multi_xml
     libv8 (3.3.10.2)
     mechanize (2.0.1)
       net-http-digest_auth (~> 1.1, >= 1.1.1)
@@ -31,6 +32,7 @@ GEM
       webrobots (~> 0.0, >= 0.0.9)
     mime-types (1.16)
     multi_json (1.0.3)
+    multi_xml (0.4.1)
     net-http-digest_auth (1.1.1)
     net-http-persistent (1.9)
     nokogiri (1.5.0)
@@ -39,27 +41,34 @@ GEM
       httparty (>= 0.4.5)
       mechanize (>= 0.9.3)
       nokogiri (>= 1.3.1)
-    rack (1.2.3)
+    rack (1.3.4)
+    rack-protection (1.1.4)
+      rack
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    sass (3.1.7)
-    sinatra (1.2.6)
-      rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
-    sprockets (2.0.0)
+    sass (3.1.10)
+    sinatra (1.3.1)
+      rack (~> 1.3, >= 1.3.4)
+      rack-protection (~> 1.1, >= 1.1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    sinatra-content-for (0.2)
+      sinatra
+    sprockets (2.0.2)
       hike (~> 1.2)
       rack (~> 1.0)
-      tilt (!= 1.3.0, ~> 1.1)
+      tilt (~> 1.1, != 1.3.0)
     spruce (0.0.2)
       rest-client (>= 1.6.0)
       yajl-ruby (>= 0.7.7)
-    swish (0.8.0)
-    therubyracer (0.9.4)
+    swish (0.8.1)
+      crack (>= 0.1.8)
+      httparty (>= 0.6.1)
+    therubyracer (0.9.8)
       libv8 (~> 3.3.10)
     tilt (1.3.3)
     webrobots (0.0.12)
       nokogiri (>= 1.4.4)
-    yajl-ruby (0.8.3)
+    yajl-ruby (1.0.0)
 
 PLATFORMS
   ruby
@@ -74,6 +83,7 @@ DEPENDENCIES
   octopi
   sass
   sinatra
+  sinatra-content-for
   sprockets
   spruce
   swish

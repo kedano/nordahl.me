@@ -1,60 +1,38 @@
 require 'bundler'
 Bundler.require
 
-configure do
-    mime_type :manifest, 'text/cache-manifest'
+require 'sinatra/content_for'
+
+#ROOT_DIR = $0 unless defined? ROOT_DIR
+
+ROOT_DIR = File.expand_path(File.dirname(__FILE__))
+
+def root_path(*args)
+  File.join(ROOT_DIR, *args)
 end
 
-project_root = File.expand_path(File.dirname(__FILE__))
 
-assets = Sprockets::Environment.new(project_root) do |env|
-  env.logger = Logger.new(STDOUT)
+# Load app files
+Dir[root_path("app/*.rb")].each do |file|
+  require file
 end
 
-#assets.append_path('assets')
-assets.append_path(File.join(project_root, 'assets'))
-assets.append_path(File.join(project_root, 'assets', 'images'))
-assets.append_path(File.join(project_root, 'assets', 'javascripts'))
-assets.append_path(File.join(project_root, 'assets', 'stylesheets'))
-
-
-module AssetHelpers
-  def asset_path(name)
-    "/assets/#{name}"
-  end
-end
-
-assets.context_class.instance_eval do
-  include AssetHelpers
-end
-
-get '/assets/*' do
-  new_env = env.clone
-  new_env["PATH_INFO"].gsub!("/assets", "")
-  assets.call(new_env)
-end
+set :views, settings.root + '/app/views'
 
 
 
 get '/', :provides => 'html' do
-	@github = Github::User.find ''
-	@forrst = Forrst::User.find 'kdn'
-	@dribbble = Dribbble::Shot.find(109375)
+	#@github = Octopi::User.repository("kdn")
 	haml :index
 end
 
-    # '/css/stylesheet.css' do
-    # scss :stylesheet
-    # 
-    # 
-    # '/js/application.js' do
-    # fee :application
-    # 
 
+get '/forrst', :provides => 'html' do
+	@forrst = Forrst::User.find 'kdn'
+	haml :forrst
+end
 
-get '/nordahlme.manifest' do
-	content_type :manifest
-	puts "CACHE MANIFEST"
-	puts "/assets/application.css"
-	puts "/assets/application.js"
+get '/dribbble', :provides => 'html' do
+	@dribbble = Dribbble::Shot.find(109375)
+	haml :dribbble
 end
