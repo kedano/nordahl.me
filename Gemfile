@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 # Framework
 gem 'sinatra'
 gem 'sinatra-content-for'
+gem 'thin'
 # HTML rendring engine HAML
 gem 'haml'
 # HTML5Boilerplate helper
