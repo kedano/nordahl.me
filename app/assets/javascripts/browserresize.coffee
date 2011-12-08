@@ -5,6 +5,7 @@ class window.BrowserResizeController
     @gallery = $(".slideshow")
     @browserwidth = $(window).width()
     
+    @retina = (if window.devicePixelRatio > 1 then true else false)
 
     # Fire code
     @imageSizeHandler()
@@ -19,15 +20,15 @@ class window.BrowserResizeController
 
   imageSizeHandler: ->
     #console.log browserwidth
-    if @browserwidth < 599    
+    if @browserwidth < 330    
       #console.log @browserwidth
       @images.each ->
         @image = $(this)
         small = @image.attr("data-image_small")
         #console.log small
         @image.attr("src", small)
-    
-    else if @browserwidth > 600 and @browserwidth < 959
+               
+    else if @browserwidth > 640 and @browserwidth < 959 or @retina
       @images.each ->
         @image = $(this)
         medium = @image.attr("data-image_medium")
