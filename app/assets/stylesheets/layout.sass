@@ -1,0 +1,71 @@
+@import css3/transition
+
+@import framework
+
+// Mobile
+body
+  +transition (right, 3s, ease-in-out)
+  +transition (position, 3s, ease-in-out)
+  +column-setup
+  img, 
+  object, 
+  video 
+    max-width: 100%
+#github,
+#forrst,
+#dfmf,
+#dribbble,
+#header,
+.client,
+.gallery,
+#about,
+#footer
+  //+grid-unit-base
+  +column-width(1)
+  +transition (width, .5s, ease-in-out)
+  margin-top: $margin
+  margin-bottom: $margin
+  background: #fff
+  padding-bottom: 1rem
+#github,
+#forrst,
+#dfmf,
+#dribbble
+  padding: 0
+// Tablet & desktop
+@media screen and (min-width: 48rem) and (max-width: 96rem)
+  $sitewidth: 60rem
+  body
+    width: $sitewidth
+    #forrst
+      +column-width(2)
+      margin-left: $margin
+    #dribbble
+      +column-width(2)
+      margin-right: $margin
+    #github,
+    #header,
+    .client,
+    .gallery,
+    #about,
+    #footer
+      +column-width(1)
+
+// Large resolution
+@media screen and (min-width: 96rem)
+  $sitewidth: 60rem
+  body
+    width: $sitewidth
+    position: absolute
+    right: 2rem
+    #forrst,
+    #dfmf,
+    #dribbble
+      +column-width(2)
+    #github,
+    #header,
+    .client,
+    .gallery,
+    #about,
+    #footer
+      +column-width(1)

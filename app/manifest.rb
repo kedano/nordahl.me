@@ -3,7 +3,7 @@ configure do
 end
 
 
-get '/nordahlme.manifest' do
+get '/app.manifest' do
 	content_type :manifest
 	puts "CACHE MANIFEST"
 	puts "/assets/application.css"

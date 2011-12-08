@@ -6,11 +6,13 @@ gem 'sinatra-content-for'
 gem 'haml'
 # HTML5Boilerplate helper
 gem 'sass'
-gem 'compass-scalablegs-plugin'
+#gem 'compass-scalablegs-plugin'
 gem 'bourbon'
 # Asset pipeline
 gem 'sprockets'
 # jQuery javascript framework
+#gem 'jquery-rails'
+#gem 'pjax-rails'
 gem 'coffee-script'
 # Guthub gem
 gem 'octopi'

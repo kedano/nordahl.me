@@ -1,0 +1,29 @@
+// Framework
+
+html
+  // Set base font size to 10px
+  font-size: 62.5% 
+  background: #000
+
+// Core
+$sitewidth: 32rem
+$margin: .2rem
+
+=column-setup
+  margin-left: auto
+  margin-right: auto
+  width: $sitewidth
+  position: relative
+
+=column-width($n)
+  float: left
+  @if $n == 1
+    width: $sitewidth / $n
+  @else 
+    width: $sitewidth / $n - $margin
+
+
+
+
+
+

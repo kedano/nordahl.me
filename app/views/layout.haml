@@ -1,29 +1,43 @@
 !!! 5
-%html{:lang => "en", :manifest => "/nordahlme.manifest"}
-  %head
-    %meta{:charset => 'utf-8'}
-    
-    %title KDN | Portfolio of Kenneth Dahlstrøm Nordahl
-    %meta{ :author => 'description', :content => 'The online presence of Kenneth D. Nordahl'}
-    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/assets/application.css"}
-    %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'}
-    %script{:src => '/assets/application.js'}
-  %body{:class => 'scalable'}
-    %header{:id => 'header'}
-      %h1 Kenneth Dahlstrøm Nordahl
-    =yield
-    %footer{:id => 'footer'}
-      %a
-        Check the source code
-      %small Copyright 2011 | <a href="http://nordahl.me">nordahl.me</a>
+/[if lt IE 7] <html lang="en" class="no-js ie6">
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+  %meta{:charset => 'utf-8'}
   
-    =# yield_content :some_key
-  
-    %script
-      window.onload = function() {
-      -# js onload
-      #{ yield_content :js_onload }
-      };
-      -# other JS
-      #{ yield_content :js_footer }
+  %title KDN | Portfolio of Kenneth Dahlstrøm Nordahl
+  %meta{ :author => 'description', :content => 'The online presence of Kenneth D. Nordahl'}
+  %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+  %link{:rel => "stylesheet", :type => "text/css", :href => "/assets/application.css"}
+  %link{:href => "http://fonts.googleapis.com/css?family=Lato:100|Adamina", :rel => "stylesheet", :type => "text/css"}/
+  %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+  %script{:src => '/assets/application.js'}
+
+%body
+  %header#header
+    %h1 Kenneth Dahlstrøm Nordahl
+  =yield
+  %footer#footer
+    %ul
+      %li
+        %a{:href => ''}
+          Scalable.gs
+      %li
+        %a{:href => ''}
+          minimalRB
+        
+
+    %small Copyright 2011 | <a href="http://nordahl.me">nordahl.me</a>
+
+  =# yield_content :some_key
+
+  %script
+    window.onload = function() {
+    -# js onload
+    #{ yield_content :js_onload }
+    };
+    -# other JS
+    #{ yield_content :js_footer }
+</html>

@@ -1,0 +1,1 @@
+;(function(a){a.fn.animateCSS=function(b,c,d){return this.each(function(){var e=a(this);if(!c||typeof c=="function"){d=c;c=0}var f=setTimeout(function(){e.addClass("animate "+b);if(e.css("visibility")=="hidden"){e.css({visibility:"visible"})}if(e.is(":hidden")){e.show()}e.bind("animationend webkitAnimationEnd",function(){if(typeof d=="function"){d.call(this)}})},c)})}})(jQuery);
