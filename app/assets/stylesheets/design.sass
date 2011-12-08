@@ -1,59 +1,152 @@
+@import css3/transition
 // Design
 
 //@import css3/linear-gradient
 
 html
   min-height: 100%
-  //background: #fff
+  background: #111
 
 body
   color: #777
 
 h1,h2,h3,h4,h5,h6,p
-  padding: 1rem
+  padding: 1rem 0
 
 a
   color: #333
+  text-decoration: none
+  //+transition (text-decoration, 3s, ease-in-out)
   &:hover
+    text-decoration: underline
   &:active
-
+    top: 1px
+  &[rel=internal]
+    &::before
+      content: "\2B07"
+      position: absolute
+      left: -1rem
+  &[rel=external]
+    text-transform: uppercase
+    display: block
+    text-align: right
+    &::after
+      content: "\2794"
+      position: absolute
+      right: 13rem
+      +transition (right, .5s, ease-in-out)
+    &:hover
+      text-decoration: none
+      &::after
+        right: -1.5rem
 // Header design
 #header
   background: #fff
-  h1
-    text-transform: uppercase
+  h1, h2
     text-transform: uppercase
     width: 30rem
     display: block
     line-height: 3.5rem
     span
       color: #333
-
+  h2
+    text-transform: none
+    position: absolute
+    top: 2rem
+    right: 0
+    text-align: right
 
 // Social modules
 #dribbble, 
 #forrst
   
+#dribbble
+  img
+    padding: 0
+    margin: 0
+#forrst
+  background: #306030
+  li
+    list-style: none
+
 // About design
 
-// 
+// Portfolio design
 .client
   position: relative
-  h1
-    z-index: 10
-    position: absolute
-    top: 3rem
-    right: 0rem
-    background: rgba(255,255,255,.7)
   .gallery
-    display: block
+    margin-bottom: 180px
+// Footer design
+#footer
+  text-transform: uppercase
+  ul
+    padding-left: 2rem
+    li
+      float: left
+      margin-right: .3rem
+      list-style: none
+  small
+    float: right
+    padding-right: 2rem
 
 
-
+@media screen and (max-width: 480px) 
+  h1,h2,h3,h4,h5,h6,p
+    padding: 1rem
 // Tablet & desktop
-@media screen and (min-width: 48rem) and (max-width: 96rem)
-  .client
+@media screen and (min-width: 480px) and (max-width: 960px)
+  html
+    background: #fff
+  #header
     h1
+      +transition (background, 3s, ease-in-out)
+      padding-right: 20rem
+      background: url(/assets/kdn-avatar-100x100.png) 27rem 1.5rem no-repeat
+  .client
+    margin-bottom: 3rem
+    h1
+      z-index: 20
+      position: absolute
+      top: 3rem
+      right: 0rem
+      background: rgba(255,255,255,.7)
+      padding: 1rem
+    .gallery
+      margin: 0px
+      margin-bottom: 360px
+
+
 
 // Large resolution
-@media screen and (min-width: 96rem)
+@media screen and (min-width: 960px)
+  html
+    background: #fff
+  #header
+    position: relative
+    height: 12rem
+    h1
+      +transition (background, 3s, ease-in-out)
+      position: absolute
+      left: -12rem
+      padding-left: 12rem
+      background: url(/assets/kdn-avatar-100x100.png) 0px 15px no-repeat
+  #about, .client
+    position: relative
+    h1
+      position: absolute
+      top: 0rem
+      left: -42rem
+      width: 40rem
+      text-align: right
+    .gallery
+      margin: 0px
+      margin-bottom: 360px
+  // .gallery
+  //   img
+  //     +transition (width, 3s, ease-in-out)
+  //     &:hover
+  //       width: 100%
+  //       position: absolute
+  //       top: 0rem
+  //       right: 0rem
+          
