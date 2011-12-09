@@ -102,8 +102,10 @@ a
       +transition (background, 3s, ease-in-out)
       padding-right: 20rem
       background: url(/assets/kdn-avatar-100x100.png) 27rem 1.5rem no-repeat
-  .client
+      +transition (background, 3s, ease-in-out)
+  #work, #about, .client
     margin-bottom: 3rem
+  .client
     h1
       z-index: 20
       position: absolute
@@ -130,8 +132,9 @@ a
       left: -12rem
       padding-left: 12rem
       background: url(/assets/kdn-avatar-100x100.png) 0px 15px no-repeat
-  #about, .client
+  #work, .client, #about
     position: relative
+    margin-bottom: 3rem
     h1
       position: absolute
       top: 0rem
