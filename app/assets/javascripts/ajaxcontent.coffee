@@ -21,5 +21,5 @@ class window.AjaxContentController
     $.ajax(url:"/dribbble",success: (data) ->
       $("#dribbble").hide()
       $("#dribbble").html data
-      $("#dribbble").animateCSS "flipInX"
+      #$("#dribbble").animateCSS "flipInX"
     )
