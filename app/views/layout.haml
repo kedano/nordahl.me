@@ -10,12 +10,15 @@
   %title KDN | Portfolio of Kenneth Dahlstrøm Nordahl
   %meta{ :author => 'description', :content => 'The online presence of Kenneth D. Nordahl'}
   %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
-  %link{:rel => "stylesheet", :type => "text/css", :href => "/assets/application.css"}
+  %link{:rel => "stylesheet", :media => "screen", :type => "text/css", :href => "/assets/application.css"}
+  %link{:rel => "stylesheet", :media => "print", :type => "text/css", :href => "/assets/print.css"}
   %link{:href => "http://fonts.googleapis.com/css?family=Lato:100|Adamina", :rel => "stylesheet", :type => "text/css"}/
   %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
   %script{:src => '/assets/application.js'}
 
-%body
+%body#content
+  -# Print preview
+  -# %a{:href => "#", :onclick => "print_preview(); return false;"} Print this page
   %header#header
     %h1 Kenneth Dahlstrøm Nordahl
     %h2 UX designer &amp; Frontend engineer
