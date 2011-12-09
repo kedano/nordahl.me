@@ -3,22 +3,22 @@ class window.BrowserResizeController
     # Elements we are dealing with
     @images = $(".gallery img")
     @gallery = $(".slideshow")
-    @browserwidth = $(window).width()
-    
     @retina = (if window.devicePixelRatio > 1 then true else false)
 
     # Fire code
     @imageSizeHandler()
-    #@windowReSizeHandler()
+
 
 
   windowReSizeHandler: ->    
-    $(window).resize ->
+    $(window).smartresize ->
       @browserwidth = $(window).width()
-      @imageSizeHandler
+      console.log @browserwidth
+      @imageSizeHandler()
 
 
-  imageSizeHandler: ->
+  imageSizeHandler = (browser)  ->
+    @browserwidth = $(window).width()
     #console.log browserwidth
     if @browserwidth < 330    
       #console.log @browserwidth
@@ -28,19 +28,19 @@ class window.BrowserResizeController
         #console.log small
         @image.attr("src", small)
                
-    else if @browserwidth > 640 and @browserwidth < 959 or @retina
+    else if @browserwidth > 640
       @images.each ->
         @image = $(this)
         medium = @image.attr("data-image_medium")
         #console.log medium
         @image.attr("src", medium) 
 
-    else if @browserwidth > 960 
+    else if @retina
       @images.each ->
         @image = $(this)
-        large = @image.attr("data-image_large")
-        #console.log large
-        @image.attr("src", large)
+        huge = @image.attr("data-image_huge")
+        #console.log huge / retina
+        @image.attr("src", huge)
          
     @imageGalleryHandler()
     @windowReSizeHandler()
