@@ -20,3 +20,4 @@ class window.FunctionalityController
         newHtml += "<span>" + words[i].substring(0, 1) + "</span>" + words[i].substring(1) + " "
         i++
       $this.html newHtml
+      
