@@ -5,57 +5,59 @@
 
 html
   min-height: 100%
-  background: #111
+  background: #fff
 
 body
   color: #777
+
+h1,h2,h3,h4,h5,h6, a
+  color: #3b424c
+
 
 h1,h2,h3,h4,h5,h6,p
   padding: 1rem 0
 
 a
-  color: #333
+  //color: #333
   text-decoration: none
   //+transition (text-decoration, 3s, ease-in-out)
   &:hover
     text-decoration: underline
   &:active
     top: 1px
-  &[rel=internal]
-    &::before
-      content: "\2B07"
-      position: absolute
-      left: -1rem
   &[rel=external]
     text-transform: uppercase
     display: block
     text-align: right
     &::after
-      content: "\2794"
-      position: absolute
-      right: 13rem
-      +transition (right, .5s, ease-in-out)
+      opacity: 0
+      +transition (opacity, 2s, ease-in-out)
     &:hover
       text-decoration: none
       &::after
-        right: -1.5rem
+        opacity: 1   
+        content: "\&#x1f517;"
+        position: absolute
+        right: 13rem
+
+
+
+
 // Header design
 #header
-  background: #fff
+  height: 12rem
+  background: url(/assets/kdn-avatar-100x100.png) 0px 15px no-repeat
+  h1
+    margin-top: 5rem
+    //text-decoration: underline
   h1, h2
-    text-transform: uppercase
-    width: 30rem
-    display: block
-    line-height: 3.5rem
+    line-height: 2rem
+    padding: 0
+    padding-left: 11rem
+
     span
       color: #333
   h2
-    text-transform: none
-    position: absolute
-    top: 2rem
-    right: 0
-    text-align: right
-
 // Social modules
 #dribbble, 
 #forrst
@@ -98,10 +100,13 @@ a
   html
     background: #fff
   #header
+    background: url(/assets/kdn-avatar-100x100.png) 0rem 1.5rem no-repeat
+    padding-left: 12rem
+    padding-top: 1rem
+    margin-left: 0rem
     h1
       +transition (background, 3s, ease-in-out)
-      padding-right: 20rem
-      background: url(/assets/kdn-avatar-100x100.png) 27rem 1.5rem no-repeat
+      padding-right: 20rem no-repeat
       +transition (background, 3s, ease-in-out)
   #work, #about, .client
     margin-bottom: 3rem
@@ -124,18 +129,15 @@ a
   html
     background: #fff
   #header
+    +transition (margin-left, 3s, ease-in-out)
     position: relative
-    height: 12rem
-    h1
-      +transition (background, 3s, ease-in-out)
-      position: absolute
-      left: -12rem
-      padding-left: 12rem
-      background: url(/assets/kdn-avatar-100x100.png) 0px 15px no-repeat
-  #work, .client, #about
+    
+
+  #header, .introduction, .client, #about
     position: relative
     margin-bottom: 3rem
     h1
+      text-transform: uppercase
       position: absolute
       top: 0rem
       left: -42rem
@@ -144,6 +146,17 @@ a
     .gallery
       margin: 0px
       margin-bottom: 360px
+  #header
+    height: 11rem
+    margin-top: 10rem
+    margin-bottom: 10rem
+    h1
+      top: .5rem
+      left: -17rem
+      width: 15rem
+    h2
+      padding-left: 12rem
+      margin-top: 4rem
   // .gallery
   //   img
   //     +transition (width, 3s, ease-in-out)
@@ -152,4 +165,8 @@ a
   //       position: absolute
   //       top: 0rem
   //       right: 0rem
+@media screen and (-webkit-min-device-pixel-ratio: 1.5)
+  #header
+    background: url(/assets/kdn-avatar-100x100@2x.png) 5px 15px no-repeat
+  
           

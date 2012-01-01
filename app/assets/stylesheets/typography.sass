@@ -1,10 +1,36 @@
 // Typography
 
-body, p, li
+
+
+@font-face
+  font-family: 'NovecentoLight'
+  src: url('/assets/Novecento-Light-webfont.eot')
+  src: url('/assets/Novecento-Light-webfont.eot?#iefix') format("embedded-opentype"), url('/assets/Novecento-Light-webfont.woff') format("woff"), url('/assets/Novecento-Light-webfont.ttf') format("truetype"), url('/assets/Novecento-Light-webfont.svg#NovecentoLight') format("svg")
+  font-weight: normal
+  font-style: normal
+
+
+@font-face
+  font-family: 'CallunaRegular'
+  src: url('/assets/Calluna-Regular-webfont.eot')
+  src: url('/assets/Calluna-Regular-webfont.eot?#iefix') format("embedded-opentype"), url('/assets/Calluna-Regular-webfont.woff') format("woff"), url('/assets/Calluna-Regular-webfont.ttf') format("truetype"), url('/assets/Calluna-Regular-webfont.svg#CallunaRegular') format("svg")
+  font-weight: normal
+  font-style: normal
+
+
+
+body, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+p, 
+li
   font-size: 12px
   font-size: 1.2rem
   text-rendering: optimizeLegibility
-
 
 h1, 
 h2, 
@@ -12,16 +38,33 @@ h3,
 h4, 
 h5, 
 h6
-  font-family: 'Lato', sans-serif
+  font-family: 'NovecentoLight', sans-serif
 
-h1, h2
-  font-size: 3.2rem
-  font-weight: 100
+h1
+  font-size: 1.3rem
+h2
+  font-size: 1.1rem
+
 p,
 li
-  font-family: 'Adamina', Verdana, serif
+  font-family: 'CallunaRegular', Verdana, serif
   line-height: 2rem
 
-@media screen and (-webkit-min-device-pixel-ratio: 2)
+@media screen and (-webkit-min-device-pixel-ratio: 1.5)
   p
     font-size: 120%
+
+
+@media screen and (min-width: 480px) and (max-width: 960px)
+  
+
+  h1
+    font-size: 1.7rem
+  h2
+    font-size: 1.5rem
+
+@media screen and (min-width: 960px)
+  h1
+    font-size: 2.5rem
+  h2
+    font-size: 2rem
