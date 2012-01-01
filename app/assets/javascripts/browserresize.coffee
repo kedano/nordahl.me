@@ -6,18 +6,19 @@ class window.BrowserResizeController
     @retina = (if window.devicePixelRatio > 1 then true else false)
 
     # Fire code
-    @imageSizeHandler()
-
-
+    #@imageSizeHandler()
+    @imageSize()
+    #@windowReSizeHandler()
+    #@listTab.bind 'click', (event) => @listTabClickHandler()
+    #$(window).on 'resize', (event) => @imageSize()
 
   windowReSizeHandler: ->    
-    $(window).smartresize ->
-      @browserwidth = $(window).width()
-      console.log @browserwidth
-      @imageSizeHandler()
+    #$(window).smartresize ->
+      #@browserwidth = $(window).width()
+      #console.log @browserwidth
+    #$(window).on 'resize', (event) => @imageSize()
 
-
-  imageSizeHandler = (browser)  ->
+  imageSize: ->
     @browserwidth = $(window).width()
     #console.log browserwidth
     if @browserwidth < 330    
@@ -44,6 +45,7 @@ class window.BrowserResizeController
          
     @imageGalleryHandler()
     @windowReSizeHandler()
+  
   imageGalleryHandler: ->
     @gallery.cycle
       fx: "fade"

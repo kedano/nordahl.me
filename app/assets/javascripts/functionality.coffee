@@ -8,7 +8,7 @@ class window.FunctionalityController
     
 
     # Fire onload javascript
-    @upperCaseHeaderHandler()
+    #@upperCaseHeaderHandler()
 
   upperCaseHeaderHandler: ->  
     @heading.each ->
