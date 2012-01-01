@@ -6,18 +6,21 @@ end
 
 # Append app assets
 assets.append_path(File.join(root_path, 'app', 'assets'))
+assets.append_path(File.join(root_path, 'app', 'assets', 'fonts'))
 assets.append_path(File.join(root_path, 'app', 'assets', 'images'))
 assets.append_path(File.join(root_path, 'app', 'assets', 'javascripts'))
 assets.append_path(File.join(root_path, 'app', 'assets', 'stylesheets'))
 
 # Append library assets
 assets.append_path(File.join(root_path, 'lib', 'assets'))
+assets.append_path(File.join(root_path, 'lib', 'assets', 'fonts'))
 assets.append_path(File.join(root_path, 'lib', 'assets', 'images'))
 assets.append_path(File.join(root_path, 'lib', 'assets', 'javascripts'))
 assets.append_path(File.join(root_path, 'lib', 'assets', 'stylesheets'))
 
 # Append vendor assets
 assets.append_path(File.join(root_path, 'vendor', 'assets'))
+assets.append_path(File.join(root_path, 'vendor', 'assets', 'fonts'))
 assets.append_path(File.join(root_path, 'vendor', 'assets', 'images'))
 assets.append_path(File.join(root_path, 'vendor', 'assets', 'javascripts'))
 assets.append_path(File.join(root_path, 'vendor', 'assets', 'stylesheets'))
