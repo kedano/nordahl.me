@@ -1,6 +1,7 @@
 get '/', :provides => 'html' do
 	#@github = Octopi::User.repository("kdn")
-	haml :index
+	#haml :index
+	haml :intro
 end
 
 
