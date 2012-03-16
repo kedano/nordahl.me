@@ -11,7 +11,7 @@ body
   color: #777
 
 h1,h2,h3,h4,h5,h6, a
-  color: #3b424c
+  color: #555
 
 
 h1,h2,h3,h4,h5,h6,p
@@ -25,59 +25,74 @@ a
     text-decoration: underline
   &:active
     top: 1px
-  &[rel=external]
-    text-transform: uppercase
-    display: block
-    text-align: right
-    &::after
-      opacity: 0
-      +transition (opacity, 2s, ease-in-out)
-    &:hover
-      text-decoration: none
-      &::after
-        opacity: 1   
-        content: "\&#x1f517;"
-        position: absolute
-        right: 13rem
-
-
-
+  // &[rel=external]
+  //   text-transform: uppercase
+  //   display: block
+  //   text-align: right
+  //   &::after
+  //     opacity: 0
+  //     +transition (opacity, 2s, ease-in-out)
+  //   &:hover
+  //     text-decoration: none
+  //     &::after
+  //       opacity: 1   
+  //       content: "\&#x1f517;"
+  //       position: absolute
+  //       right: 13rem
 
 // Header design
 #header
-  height: 12rem
+  background: #fff
+  height: 14rem
   background: url(/assets/kdn-avatar-100x100.png) 0px 15px no-repeat
   h1
-    margin-top: 5rem
+    margin-top: 35px
+    margin-top: 3.5rem
     //text-decoration: underline
   h1, h2
     line-height: 2rem
     padding: 0
-    padding-left: 11rem
 
-    span
-      color: #333
   h2
 // Social modules
-#dribbble, 
-#forrst
+// #dribbble, 
+// #forrst
   
-#dribbble
-  img
-    padding: 0
-    margin: 0
-#forrst
-  background: #306030
-  li
-    list-style: none
+// #dribbble
+//   img
+//     padding: 0
+//     margin: 0
+// #forrst
+//   background: #306030
+//   li
+//     list-style: none
 
 // About design
 
 // Portfolio design
-.client
-  position: relative
-  .gallery
-    margin-bottom: 180px
+.article
+  li
+    list-style: none
+    a
+      margin-right: 10px
+      margin-right: 1rem
+      padding: 5px 10px
+      padding: .5rem 1rem
+      float: left
+      border: 1px solid rgba(0,0,0,.1)
+      border-radius: 5px
+      border-radius: .5rem
+      +transition (background, .25s, ease-in-out)
+
+      &[rel=internal], &[rel=external]
+  &:hover
+    li
+      a
+        text-decoration: none
+        background: rgba(0,255,0,.2)      
+        &:hover
+          background: rgba(0,0,255,0)
+
 // Footer design
 #footer
   text-transform: uppercase
@@ -93,12 +108,35 @@ a
 
 
 @media screen and (max-width: 480px) 
-  h1,h2,h3,h4,h5,h6,p
-    padding: 1rem
+  #header
+    background: url(/assets/kdn-avatar-100x100.png) .5rem 1.5rem no-repeat
+    background-size: 20%
+    height: 8.5rem
+    h1
+      margin-top: 3rem
+      font-size: 1.4rem
+      margin-bottom: 0px
+      margin-bottom: 0rem
+    h2
+      font-size: 1.24rem
+    h1, h2
+      padding-left: 8rem
+  article
+    h1,h2,h3,h4,h5,h6,p
+      padding: 10px
+      padding: 1rem
+    h1
+      //box-shadow: 0px -10px 0px #000
+      border-top: 1px solid #eee
+      border-bottom: 1px solid #eee
+  .article
+    li
+      a
+        background: rgba(0,0,255,.1)
+  .technology
+    display: none
 // Tablet & desktop
-@media screen and (min-width: 480px) and (max-width: 960px)
-  html
-    background: #fff
+@media screen and (min-width: 481px)
   #header
     background: url(/assets/kdn-avatar-100x100.png) 0rem 1.5rem no-repeat
     padding-left: 12rem
@@ -108,55 +146,51 @@ a
       +transition (background, 3s, ease-in-out)
       padding-right: 20rem no-repeat
       +transition (background, 3s, ease-in-out)
-  #work, #about, .client
-    margin-bottom: 3rem
-  .client
-    h1
-      z-index: 20
-      position: absolute
-      top: 3rem
-      right: 0rem
-      background: rgba(255,255,255,.7)
-      padding: 1rem
-    .gallery
-      margin: 0px
-      margin-bottom: 360px
+      font-size: 25px
+      font-size: 2.5rem
+      margin-bottom: 5px
+      margin-bottom: .5rem
+    h2
+      font-size: 22px
+      font-size: 2.2rem
+  .article
+    padding-bottom: 4rem
 
 
 
 // Large resolution
-@media screen and (min-width: 960px)
-  html
-    background: #fff
-  #header
-    +transition (margin-left, 3s, ease-in-out)
-    position: relative
-    
+// @media screen and (min-width: 960px)
+//   html
 
-  #header, .introduction, .client, #about
-    position: relative
-    margin-bottom: 3rem
-    h1
-      text-transform: uppercase
-      position: absolute
-      top: 0rem
-      left: -42rem
-      width: 40rem
-      text-align: right
-    .gallery
-      margin: 0px
-      margin-bottom: 360px
-  #header
-    height: 11rem
-    margin-top: 10rem
-    margin-bottom: 10rem
-    h1
-      top: .5rem
-      left: -17rem
-      width: 15rem
-    h2
-      padding-left: 12rem
-      margin-top: 4rem
+//   #header
+//     +transition (margin-left, 3s, ease-in-out)
+//     position: relative
+
+
+//   #header, .introduction, .client, #about
+//     position: relative
+//     margin-bottom: 3rem
+//     h1
+//       text-transform: uppercase
+//       position: absolute
+//       top: 0rem
+//       left: -42rem
+//       width: 40rem
+//       text-align: right
+//     .gallery
+//       margin: 0px
+//       margin-bottom: 360px
+//   #header
+//     height: 11rem
+//     margin-top: 10rem
+//     margin-bottom: 10rem
+//     h1
+//       top: .5rem
+//       left: -17rem
+//       width: 15rem
+//     h2
+//       padding-left: 12rem
+//       margin-top: 4rem
   // .gallery
   //   img
   //     +transition (width, 3s, ease-in-out)
@@ -165,8 +199,8 @@ a
   //       position: absolute
   //       top: 0rem
   //       right: 0rem
-@media screen and (-webkit-min-device-pixel-ratio: 1.5)
-  #header
-    background: url(/assets/kdn-avatar-100x100@2x.png) 5px 15px no-repeat
+// @media screen and (-webkit-min-device-pixel-ratio: 1.5)
+//   #header
+//     background: url(/assets/kdn-avatar-100x100@2x.png) 5px 15px no-repeat
   
           

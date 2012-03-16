@@ -4,13 +4,12 @@ a
     text-decoration: none
   &[rel=external]
     &::after
-      content: " (" attr(href) ") ";
-      font-size: 90%;
+      content: " (" attr(href) ") "
+      font-size: 90%
 
 
 
 #content 
-  a:after, #content a:visited:after {
-   content: " (" attr(href) ") ";
-   font-size: 90%;
-   }
+  a:after, #content a:visited:after
+    content:  attr(href)
+    font-size: 90%

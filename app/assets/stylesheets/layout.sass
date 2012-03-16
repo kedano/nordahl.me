@@ -3,12 +3,14 @@
 @import framework
 
 // Mobile
-body
+#body
   +column-setup
   img, 
   object, 
   video 
     max-width: 100%
+  > *
+    float: left
 #github,
 #forrst,
 #dfmf,
@@ -31,12 +33,12 @@ body
 #footer
   padding: 0
 // Mobile 
-@media screen and (max-width: 32rem)
+@media screen and (max-width: 48rem), screen and (max-width: 480px)
   
 // Tablet & desktop
-@media screen and (min-width: 32rem) and (max-width: 96rem)
-  $sitewidth: 64rem
-  body
+@media screen and (min-width: 48rem), screen and (min-width: 480px)
+  $sitewidth: 60rem
+  #body
     width: $sitewidth
     #forrst
       +column-width(2)
@@ -51,23 +53,23 @@ body
     #about,
     #footer
       +column-width(1)
+
 @media screen and (min-width: 64rem) and (max-width: 96rem)
-  
 // Large resolution
-@media screen and (min-width: 960px)
-  $sitewidth: 60rem
-  body
-    width: $sitewidth
-    position: absolute
-    right: 2rem
-    #forrst,
-    #dfmf,
-    #dribbble
-      +column-width(2)
-    #github,
-    #header,
-    .client,
-    .gallery,
-    #about,
-    #footer
-      +column-width(1)
+// @media screen and (min-width: 960px)
+//   $sitewidth: 60rem
+//   body
+//     width: $sitewidth
+//     position: absolute
+//     right: 2rem
+//     #forrst,
+//     #dfmf,
+//     #dribbble
+//       +column-width(2)
+//     #github,
+//     #header,
+//     .client,
+//     .gallery,
+//     #about,
+//     #footer
+//       +column-width(1)
