@@ -1,60 +1,57 @@
 %section#work.clearfix
-  %article.introduction
+  %article.article.introduction
     %h1 Work
     %p
-      I am a leader when it comes to taking advantage of new technics and technologies in my work. I’m an expert in the front end field juggling the latest advances in HTML, CSS and Javascript to create an immersive experiences for the visitor. Most of what I have done up ontil now has been written in Ruby / Haml / Sass / Coffee Script.
+      I am a leader when it comes to taking advantage of new technics and technologies in my work. I’m an expert in the front end field juggling the latest advances in HTML, CSS and Javascript to create an immersive experiences for the visitor.
     %p
-      A handfull of selected projects is available with description next, otherwise I refer to <a href="#about" rel="internal">my about section</a> for more information about me.
+      A handfull of selected projects is available with description next.
 
-  %article.client
-    %h1 KDNMEDIA
-    .gallery.slideshow
-      %img{:src => '/assets/lion-1-320x180.jpg', :data => {:image_small => '/assets/lion-1-320x180.jpg', :image_medium => '/assets/lion-1-640x360.jpg', :image_large => '/assets/lion-1-960x540.jpg', :image_huge => '/assets/lion-1-1920x1080.jpg'}}
-      %img{:src => '/assets/lion-2-320x180.jpg', :data => {:image_small => '/assets/lion-2-320x180.jpg', :image_medium => '/assets/lion-2-640x360.jpg', :image_large => '/assets/lion-2-960x540.jpg', :image_huge => '/assets/lion-2-1920x1080.jpg'}}
-      %img{:src => '/assets/lion-3-320x180.jpg', :data => {:image_small => '/assets/lion-3-320x180.jpg', :image_medium => '/assets/lion-3-640x360.jpg', :image_large => '/assets/lion-3-960x540.jpg', :image_huge => '/assets/lion-3-1920x1080.jpg'}}
-      %img{:src => '/assets/lion-4-320x180.jpg', :data => {:image_small => '/assets/lion-4-320x180.jpg', :image_medium => '/assets/lion-4-640x360.jpg', :image_large => '/assets/lion-4-960x540.jpg', :image_huge => '/assets/lion-4-1920x1080.jpg'}}
-    %p 
-      Kdnmedia is a new kind of digital store where every product has an option where both me and you ship in towards the Charity:Water foundation.
+  %article.article.client.development.design
+    %h1 Høgskolen i Østfold
     %p
-      The biggest challenge I had when I started this personal project was to pack as much information about the products together with a range of product images on as little space as possible. Visitors on mobile devices should be able to have the same kind of experience as the people who visit the site on the full screen experience.
+      Høgskolen i Østfold is known for being one of the pioner IT educators in Norway with roots
     %p
-      Another goal with the project was to simplify the buying experience as much as possible. This might sound like a easy task but the backend of the store had to be a robust system where buyers would be able to access their files whenever they wanted to. I ended up linking the site into the awesome Quixly service.
+      I currently have the pleasure of working at their information and communication department with being the lead developer of their next generation web platform.
+    %ul
+      %li
+        %a{:href => '/articles/responsive-design-of-hiof', :title => 'The story of Høgskolen i Østfold', :rel => "internal"} Continue reading
+      %li
+        %a{:href => 'http://hiof.no', :title => 'Høgskolen i Østfold', :rel => "external"} Visit the website
+  %article.article.client.research
+    %h1 Small screen first. A design process using the Scalable Grid System
     %p
-      %a{:href => 'http://kdnmedia.com', :title => 'Link to KDNMEDIA', :rel => "external"} Visit the website
-  %article.client
+      This paper describes the fragmentation in the current design of web content and looks at a possible solution to ease the entry point for cross browser and multi screen size development. It takes a step back from the discussion regarding the design aesthetics and focuses on the overall layout.
+    %ul
+      %li
+        %a{:href => '/articles/small-screen-first-a-design-process-using-the-scalable-grid-system', :title => 'Scalable Grid System', :rel => "internal"} Read the research paper
+  %article.article.client.media
+    %h1 Video productions
+    %p
+      I've had different roles on the set for several short movies and a music video.
+    %ul
+      %li
+        %a{:href => 'http://scalable.gs', :title => 'Scalable Grid System', :rel => "internal"} Continue reading
+      %li
+        %a{:href => 'http://hiof.no', :title => 'Høgskolen i Østfold', :rel => "external"} Visit the website
+
+  %article.article.client.development
+    %h1 minimalRB
+    %p
+      minimalRB is a minimalistic starting point for anyone who want to get up and running with a Ruby based application that include an asset pipeline that renders Haml, Sass and CoffeeScript.
+    %ul
+      %li
+        %a{:href => 'http://hiof.no', :title => 'Høgskolen i Østfold', :rel => "external"} Visit the website
+
+  %article.article.client.development
     %h1 Scalable Grid System
-    %img{:src => 'http://dl.dropbox.com/u/2610294/nordahlme/portfolio-scalablegs-520x250.jpg', :width => '520'}
-    %p 
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     %p
-      %a{:href => 'http://scalable.gs', :title => 'Scalable Grid System', :rel => "external"} Visit the website
-  %article.client
-    %h1 ADCO Constructions
-    %img{:src => 'http://dl.dropbox.com/u/2610294/nordahlme/portfolio-adcoconstructions-520x250.jpg', :width => '520'}
-    %p 
-      I was involved in this project as a freelancer contracted by 
-      %a{:href => "http://www.knd.com.au/", :title => "Link to KND Web Consultants"} KND Web Consultants
-      \. ADCO Constructions is a leading Australian construction company operating on the east coast with representation in every major city. They have grown to be one of the top 100 private companies in Australia with a revenue in excess of $500 million per annum and 350 direct employees.
-    %p
-      My role in the project was to develop a Wordpress theme based on a provided design. This included the wordpress PHP hooks, HTML(5) and CSS3 (with old browser fallback).
-    %p
-      %a{:href => 'http://www.adcoconstruct.com.au/', :title => 'Link to ADCO constructions', :rel => "external"} Visit the website
-%section{:id => 'about'}
-  %h1 My story
+      The Scalable Grid System or scalable.gs for short, is a device independent and cross screen size web development framework. The system use a range of technologies to optimize the user experience of a website on a range of different platforms.
+    %ul
+      %li
+        %a{:href => 'http://hiof.no', :title => 'Høgskolen i Østfold', :rel => "external"} Visit the website
 
-/ Social networks
-/ %section.clearfix.hidden
-/   #github
-/     %h1 Github
-/   #dfmf
-/     %h1 Design for mobile first
-/ %section.clearfix
-/   #dribbble
-/     %h1.username Dribbble
-/   #forrst
-/     %h1.username Forrst
 
 -content_for :js_onload do
-  functionalityController = new window.FunctionalityController();
-  ajaxContentController = new window.AjaxContentController();
-  browserResizeController = new window.BrowserResizeController();
+  / functionalityController = new window.FunctionalityController();
+  / ajaxContentController = new window.AjaxContentController();
+  / browserResizeController = new window.BrowserResizeController();
