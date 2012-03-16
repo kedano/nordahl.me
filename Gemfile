@@ -22,6 +22,9 @@ gem 'httparty'
 gem 'swish'
 # Forrst gem
 gem 'spruce'
+# Markdown
+gem 'rdiscount'
+gem 'nokogiri'
 # JS runtime
 gem "execjs"
 gem "therubyracer"
