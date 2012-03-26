@@ -20,6 +20,7 @@ h1,h2,h3,h4,h5,h6,p
 a
   //color: #333
   text-decoration: none
+  color: #00B3B3
   //+transition (text-decoration, 3s, ease-in-out)
   &:hover
     text-decoration: underline
@@ -71,20 +72,24 @@ a
 
 // Portfolio design
 .article
-  li
-    list-style: none
-    a
-      margin-right: 10px
-      margin-right: 1rem
-      padding: 5px 10px
-      padding: .5rem 1rem
-      float: left
-      border: 1px solid rgba(0,0,0,.1)
-      border-radius: 5px
-      border-radius: .5rem
-      +transition (background, .25s, ease-in-out)
+  ul
+    li
+      list-style: none
+      a
+        margin-right: 10px
+        margin-right: 1rem
+        padding: 5px 10px
+        padding: .5rem 1rem
+        float: left
+        border: 1px solid rgba(0,0,0,.1)
+        border-radius: 5px
+        border-radius: .5rem
+        +transition (background, .25s, ease-in-out)
 
-      //&[rel=internal], &[rel=external]
+        //&[rel=internal], &[rel=external]
+        &[rel=internal]
+          margin-left: 10px
+          margin-left: 1rem
   &:hover
     li
       a
