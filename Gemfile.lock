@@ -29,7 +29,7 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (~> 0.0, >= 0.0.9)
-    mime-types (1.17.2)
+    mime-types (1.18)
     multi_json (1.1.0)
     multi_xml (0.4.2)
     net-http-digest_auth (1.2)
