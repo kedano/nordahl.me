@@ -72,6 +72,31 @@ p
   line-height: 20px
   line-height: 2rem
   font-weight: 300
+
+blockquote
+  margin-left: 30px
+  margin-left: 3rem
+  position: relative
+  padding-right: 2rem
+  margin-top: 3rem
+  margin-bottom: 2rem
+  font-style: oblique
+  &:before, &:after
+    position: absolute
+    font-size: 7rem
+    color: #ddd
+    font-style: normal
+  &:before
+    top: 20px
+    left: -30px
+    content: "\201C"
+  &:after
+    bottom: 0px
+    right: 0px
+    content: "\201D"
+  cite
+    font-style: normal
+
 @media screen and (max-width: 48rem), screen and (max-width: 480px)
 
   h1
