@@ -5,7 +5,7 @@ gem 'sinatra-content-for'
 gem 'thin'
 # HTML rendring engine HAML
 gem 'haml'
-# HTML5Boilerplate helper
+# CSS rendring engine Sass
 gem 'sass'
 #gem 'compass-scalablegs-plugin'
 gem 'bourbon'
@@ -15,13 +15,13 @@ gem 'sprockets'
 #gem 'jquery-rails'
 #gem 'pjax-rails'
 gem 'coffee-script'
-# Guthub gem
-gem 'octopi'
-# Dribbble gem
-gem 'httparty'
-gem 'swish'
-# Forrst gem
-gem 'spruce'
+# # Guthub gem
+# gem 'octopi'
+# # Dribbble gem
+# gem 'httparty'
+# gem 'swish'
+# # Forrst gem
+# gem 'spruce'
 # Markdown
 gem 'rdiscount'
 gem 'nokogiri'
