@@ -16,7 +16,7 @@
   %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
   %link{:rel => "stylesheet", :media => "screen", :type => "text/css", :href => "/assets/application.css"}
   %link{:rel => "stylesheet", :media => "print", :type => "text/css", :href => "/assets/print.css"}
-  %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+  %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'}
   %script{:src => '/assets/application.js'}
   %link{:rel => "icon", :type => "image/png", :href => "/favicon.png"}
 %body#body
@@ -29,11 +29,14 @@
   %footer#footer
     %ul.technology
       %li
-        Technology:
+        %a{:href => 'http://github.com/KDN/nordahl.me'}
+          Source code
       %li
+        |
         %a{:href => 'http://scalable.gs'}
           Scalable.gs
       %li
+        |
         %a{:href => 'http://minimalrb.com'}
           minimalRB
         
