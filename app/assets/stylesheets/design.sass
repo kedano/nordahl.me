@@ -1,8 +1,6 @@
 @import css3/transition
+
 // Design
-
-//@import css3/linear-gradient
-
 html
   min-height: 100%
   background: #fff
@@ -18,28 +16,13 @@ h1,h2,h3,h4,h5,h6,p
   padding: 1rem 0
 
 a
-  //color: #333
   text-decoration: none
   color: #00B3B3
-  //+transition (text-decoration, 3s, ease-in-out)
   &:hover
     text-decoration: underline
   &:active
     top: 1px
-  // &[rel=external]
-  //   text-transform: uppercase
-  //   display: block
-  //   text-align: right
-  //   &::after
-  //     opacity: 0
-  //     +transition (opacity, 2s, ease-in-out)
-  //   &:hover
-  //     text-decoration: none
-  //     &::after
-  //       opacity: 1   
-  //       content: "\&#x1f517;"
-  //       position: absolute
-  //       right: 13rem
+
 
 // Header design
 #header
@@ -54,21 +37,7 @@ a
     line-height: 2rem
     padding: 0
 
-  //h2
-// Social modules
-// #dribbble, 
-// #forrst
-  
-// #dribbble
-//   img
-//     padding: 0
-//     margin: 0
-// #forrst
-//   background: #306030
-//   li
-//     list-style: none
 
-// About design
 
 // Portfolio design
 .article
@@ -85,8 +54,6 @@ a
         border-radius: 5px
         border-radius: .5rem
         +transition (background, .25s, ease-in-out)
-
-        //&[rel=internal], &[rel=external]
         &[rel=internal]
           margin-right: 10px
           margin-right: 1rem
@@ -94,22 +61,19 @@ a
     li
       a
         text-decoration: none
-        background: rgba(0,255,0,.2)      
-        &:hover
-          background: rgba(0,0,255,0)
 
 // Footer design
 #footer
   text-transform: uppercase
+  padding-bottom: 20px
+  padding-bottom: 2rem
   ul
-    padding-left: 2rem
     li
       float: left
       margin-right: .3rem
       list-style: none
   small
     float: right
-    padding-right: 2rem
 
 
 @media screen and (max-width: 480px) 
@@ -131,15 +95,20 @@ a
       padding: 10px
       padding: 1rem
     h1
-      //box-shadow: 0px -10px 0px #000
       border-top: 1px solid #eee
       border-bottom: 1px solid #eee
   .article
-    li
-      a
-        background: rgba(0,0,255,.1)
+    li        
+      margin-left: 10px
+      margin-left: 1rem
+      margin-right: 0px
   .technology
     display: none
+  #footer
+    border-top: 1px solid #eee
+    padding-top: 20px
+    padding-top: 2rem
+
 // Tablet & desktop
 @media screen and (min-width: 481px)
   #header
@@ -160,52 +129,3 @@ a
       font-size: 2.2rem
   .article
     padding-bottom: 4rem
-
-
-
-// Large resolution
-// @media screen and (min-width: 960px)
-//   html
-
-//   #header
-//     +transition (margin-left, 3s, ease-in-out)
-//     position: relative
-
-
-//   #header, .introduction, .client, #about
-//     position: relative
-//     margin-bottom: 3rem
-//     h1
-//       text-transform: uppercase
-//       position: absolute
-//       top: 0rem
-//       left: -42rem
-//       width: 40rem
-//       text-align: right
-//     .gallery
-//       margin: 0px
-//       margin-bottom: 360px
-//   #header
-//     height: 11rem
-//     margin-top: 10rem
-//     margin-bottom: 10rem
-//     h1
-//       top: .5rem
-//       left: -17rem
-//       width: 15rem
-//     h2
-//       padding-left: 12rem
-//       margin-top: 4rem
-  // .gallery
-  //   img
-  //     +transition (width, 3s, ease-in-out)
-  //     &:hover
-  //       width: 100%
-  //       position: absolute
-  //       top: 0rem
-  //       right: 0rem
-// @media screen and (-webkit-min-device-pixel-ratio: 1.5)
-//   #header
-//     background: url(/assets/kdn-avatar-100x100@2x.png) 5px 15px no-repeat
-  
-          
