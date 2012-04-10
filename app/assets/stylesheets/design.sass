@@ -8,7 +8,7 @@ html
 body
   color: #444
 
-h1,h2,h3,h4,h5,h6, a
+h1,h2,h3,h4,h5,h6
   color: #222
 
 
@@ -17,11 +17,25 @@ h1,h2,h3,h4,h5,h6,p
 
 a
   text-decoration: none
-  color: #00B3B3
+  color: #ff6262
   &:hover
     text-decoration: underline
   &:active
     top: 1px
+// a[rel=external]
+//   color: #6363ff
+
+h1 a
+  color: #222
+  +transition (color, .25s, ease-in-out)
+  &:hover
+    text-decoration: none
+    color: #ff6262
+  // &[rel=external]
+  //   color: #222
+  //   &:hover
+  //     color: #6363ff
+
 
 
 // Header design
@@ -53,14 +67,13 @@ a
         border: 1px solid rgba(0,0,0,.1)
         border-radius: 5px
         border-radius: .5rem
-        +transition (background, .25s, ease-in-out)
+        +transition (color, .25s, ease-in-out)
         &[rel=internal]
           margin-right: 10px
           margin-right: 1rem
-  &:hover
-    li
-      a
-        text-decoration: none
+        &:hover
+          text-decoration: none
+          color: #111
 
 // Footer design
 #footer
