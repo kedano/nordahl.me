@@ -23,8 +23,9 @@
   -# Print preview
   -# %a{:href => "#", :onclick => "print_preview(); return false;"} Print this page
   %header#header
-    %h1 Kenneth Dahlstrøm Nordahl
-    %h2 UX designer &amp; Frontend engineer
+    %a{:href => 'http://nordahl.me', :rel => "internal"}
+      %h1 Kenneth Dahlstrøm Nordahl
+      %h2 UX designer &amp; Frontend engineer
   =yield
   %footer#footer
     %ul.technology
