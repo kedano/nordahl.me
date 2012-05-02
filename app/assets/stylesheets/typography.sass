@@ -1,7 +1,11 @@
 // Typography
+@import css3/transition
 
 html
-  font-size: 10px
+  font-size: 62.5%
+  // +transition-property(font-size)
+  // +transition-duration(2s)
+  // +transition-timing-function(ease-in-out)
 
 @font-face
   font-family: 'NovecentoLight'
@@ -88,16 +92,20 @@ blockquote
     font-style: normal
   &:before
     top: 20px
+    top: 2rem
     left: -30px
+    left: -3rem
     content: "\201C"
   &:after
     bottom: 0px
+    bottom: 0rem
     right: 0px
+    right: 0rem
     content: "\201D"
   cite
     font-style: normal
 
-@media screen and (max-width: 48rem), screen and (max-width: 480px)
+@media screen and (max-width: 60rem), screen and (max-width: 600px)
 
   h1
     font-size: 1.6rem
@@ -109,6 +117,13 @@ blockquote
     font-size: 1.1rem
   h5
     font-size: 1.0rem
+  blockquote
+    &:before
+      left: -20px
+      left: -2rem
+    &:after
+      right: 10px
+      right: 1rem
 
 @media screen and (-webkit-min-device-pixel-ratio: 1.5)
   body,
