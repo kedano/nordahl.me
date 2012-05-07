@@ -2,13 +2,13 @@
 
 <figure>
 <img src="http://dl.dropbox.com/u/2610294/nordahlme/portfolio/hiof-app-hero.jpg" alt="Hero shot">
-<cite>Screenshot - hiof.no 2012. <small>Copyright: Kenneth D. Nordahl, Østfold University Collage</small></cite>
+<cite>Screenshot - hiof.no 2012. <small>Copyright: Kenneth D. Nordahl, Østfold University college</small></cite>
 </figure>
 
 <a name="introduction" > </a>
 ## Introduction
 
-Østfold University collage is famous for being one of the first higher IT educators in Norway with a pretty stellar list of previous graduates. The website, located at [hiof.no](http://hiof.no) was one of the first Norwegian websites. The design for the site has been renewed every two years or so to comply with the requirements set fourth by the Norwegian state for public sites [Difi Kvalitetskrav](http://kvalitet.difi.no/).
+Østfold University college is famous for being one of the first higher IT educators in Norway with a pretty stellar list of previous graduates. The website, located at [hiof.no](http://hiof.no) was one of the first Norwegian websites. The design for the site has been renewed every two years or so to comply with the requirements set fourth by the Norwegian state for public sites [Difi Kvalitetskrav](http://kvalitet.difi.no/).
 
 The demographic for the site is mainly people between 18 and 30, in other words, a pretty young demographic who often are at the forefront of new technology. Looking into the data of our user base I found that about 7% of our visitors use either a iOS or Android based device. 
 
@@ -81,7 +81,7 @@ The user experience and design plan for a totally new desktop version is current
 
 #### Until March
 
-The focus on the next stage for the website has been somewhat lacking in the wait of the decision to either fusion with other collage universities and create a new web platform or totally revamp our own site. With a final decision to continue on our own at March 13. it was finally time to refine and push forward on our development stages.
+The focus on the next stage for the website has been somewhat lacking in the wait of the decision to either fusion with other college universities and create a new web platform or totally revamp our own site. With a final decision to continue on our own at March 13. it was finally time to refine and push forward on our development stages.
 
 * Prototyping
     - Prototyping with different technologies
@@ -366,7 +366,7 @@ The site on a desktop computer:
 
 **Agile development:**
 
-> Agile software development is a group of software development methods based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development and delivery, a time-boxed iterative approach, and encourages rapid and flexible response to change. It is a conceptual framework that promotes foreseen interactions throughout the development cycle.
+> Agile software development is a group of software development methods based on iterative and incremental development, where requirements and solutions evolve through colleboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development and delivery, a time-boxed iterative approach, and encourages rapid and flexible response to change. It is a conceptual framework that promotes foreseen interactions throughout the development cycle.
 
 > <cite>- [Wikipedia article about agile development](http://en.wikipedia.org/wiki/Agile_software_development)</cite>
 
