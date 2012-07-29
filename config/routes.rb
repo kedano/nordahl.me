@@ -36,3 +36,9 @@ get '/articles/*' do
   @fourofour = "#{four} #{index}"
   haml @fourofour
 end
+
+
+get '/work' do
+  @work = RDiscount.new( File.open("content/work/index.md").read ).to_html
+  haml @work
+end

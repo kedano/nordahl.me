@@ -8,7 +8,7 @@
   %meta{:charset => 'utf-8'}
   
   %title 
-    = @title || "KDN | Kenneth Dahlstrøm Nordahl, User Experience Designer and Frontend Developer"
+    = @title || "Dahlstrøm product design"
 
 
 
@@ -19,31 +19,31 @@
   %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'}
   %script{:src => '/assets/application.js'}
   %link{:rel => "icon", :type => "image/png", :href => "/favicon.png"}
+  %meta{:content => "y40Sgf6_RLfdiKhmWRQ_fuPxj94uCLmCOiHb41Km2ig", :name => "google-site-verification"}/
 %body#body
   -# Print preview
   -# %a{:href => "#", :onclick => "print_preview(); return false;"} Print this page
   %header#header
     %a{:href => 'http://nordahl.me', :rel => "internal"}
-      %h1 Kenneth Dahlstrøm Nordahl
-      %h2 UX designer &amp; Frontend engineer
+      %h1 <span class="gray">Dahlstrøm</span><span class="blue">Product</span><span class="red">design</span>
   =yield
   %footer#footer
-    %ul.technology
-      %li
-        %a{:href => 'http://github.com/KDN/nordahl.me', :rel => "external"}
-          Source code
-      %li
-        |
-        %a{:href => 'http://scalable.gs', :rel => "external"}
-          Scalable.gs
-      %li
-        |
-        %a{:href => 'http://minimalrb.com', :rel => "external"}
-          minimalRB
+    -#%ul.technology
+    -#  %li
+    -#    %a{:href => 'http://github.com/KDN/nordahl.me', :rel => "external"}
+    -#      Source code
+    -#  %li
+    -#    |
+    -#    %a{:href => 'http://scalable.gs', :rel => "external"}
+    -#      Scalable.gs
+    -#  %li
+    -#    |
+    -#    %a{:href => 'http://minimalrb.com', :rel => "external"}
+    -#      minimalRB
         
 
     %small{:rel => "copyright"}
-      Copyright 2012 | <a href="http://nordahl.me" rel="internal">nordahl.me</a>
+      Copyright 2012 | <a href="http://dpd.im" rel="internal">dpd.im</a>
 
   =# yield_content :some_key
 
@@ -55,15 +55,15 @@
     -# other JS
     #{ yield_content :js_footer }
 
-  :javascript
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-28587675-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  / :javascript
+  /   var _gaq = _gaq || [];
+  /   _gaq.push(['_setAccount', 'UA-28587675-1']);
+  /   _gaq.push(['_trackPageview']);
+  /   (function() {
+  /     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  /     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  /     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  /   })();
     
 
 
