@@ -18,9 +18,10 @@ h1,h2,h3,h4,h5,h6,p
 a
   text-decoration: none
   color: #ff6262
+  +transition (color, .5s, ease-in-out)
   &:hover
-    text-decoration: underline
-    color: #ff6262
+    text-decoration: none
+    color: #79a6af
   &:active
     top: 1px
 // a[rel=external]
@@ -62,7 +63,6 @@ h1 a
           color: #79a6af
     &:hover
       text-decoration: none
-
       span
         &.gray
           color: #79a6af
@@ -99,6 +99,8 @@ h1 a
   border-radius: 5px
   border-radius: .5rem
   +transition (color, .25s, ease-in-out)
+  margin-bottom: 30px
+  margin-bottom: 3rem
   &[rel=internal]
     margin-right: 10px
     margin-right: 1rem
