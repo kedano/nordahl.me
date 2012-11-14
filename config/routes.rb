@@ -20,7 +20,7 @@ get '/articles/:article' do
   @content = RDiscount.new( File.open("content/articles/" + params["article"].gsub("-", "_").concat(".md")).read ).to_html
   doc_title = Nokogiri::HTML::DocumentFragment.parse( @content ).css('h1').inner_html()  
   @content = "<article>" + @content + "</article>"
-  @title = "#{doc_title} | KDN"
+  @title = "#{doc_title} | Dahlstrøm Product Design"
   haml @content
 end
 
