@@ -40,5 +40,12 @@ end
 
 get '/work' do
   @work = RDiscount.new( File.open("content/work/index.md").read ).to_html
+  @title = "Case studies | Dahlstrøm Product Design"
+  haml @work
+end
+
+get '/casestudies' do
+  @work = RDiscount.new( File.open("content/work/index.md").read ).to_html
+  @title = "Case studies | Dahlstrøm Product Design"
   haml @work
 end
