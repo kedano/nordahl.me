@@ -28,3 +28,4 @@ gem 'nokogiri'
 # JS runtime
 gem "execjs"
 gem "therubyracer"
+gem 'libv8'
